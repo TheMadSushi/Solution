@@ -1,5 +1,6 @@
+import java.util.*;
 *.class
-
+public class Solutions {
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
@@ -10,3 +11,33 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int tc = scan.nextInt();
+		String[] word = new String[tc];
+		
+		
+		if(tc >= 1 && tc <=10){
+			
+			for(int j = 0; j < tc ;j++){
+			 word[j] = scan.next();
+			}
+		}
+		
+		for(int i = 0;i < word.length ;i++){
+			char[] ch = word[i].toCharArray();
+			for(int k = 0; k < word[i].length(); k++){
+				if(k%2 == 0){
+					System.out.print(ch[k]);
+				}
+			}System.out.print(" ");
+			for(int k = 0; k < word[i].length(); k++){
+				if(k%2 != 0){
+					System.out.print(ch[k]);
+				}
+			}
+			System.out.println();
+		}
+	}
+}
